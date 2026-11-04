@@ -1,78 +1,103 @@
+// MOBILE NAVIGATION
+
 const menuBtn = document.getElementById("menuBtn");
 const navLinks = document.getElementById("navLinks");
-const topBtn = document.getElementById("topBtn");
 
-// Mobile navigation
-menuBtn.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
+menuBtn.addEventListener("click", function () {
+
+    navLinks.classList.toggle("active");
+
+    const isOpen = navLinks.classList.contains("active");
+
+    menuBtn.textContent = isOpen ? "✕" : "☰";
+
+    menuBtn.setAttribute("aria-expanded", isOpen);
 });
 
-// Close menu after clicking a link
-document.querySelectorAll(".nav-links a").forEach(link => {
-  link.addEventListener("click", () => {
-    navLinks.classList.remove("active");
-  });
+// CLOSE MENU AFTER CLICKING A LINK
+
+document.querySelectorAll(".nav-links a").forEach(function(link) {
+
+    link.addEventListener("click", function() {
+
+        navLinks.classList.remove("active");
+
+        menuBtn.textContent = "☰";
+
+        menuBtn.setAttribute("aria-expanded", "false");
+
+    });
+
 });
 
-// Current year
-document.getElementById("year").textContent =
-  new Date().getFullYear();
+// TYPING ANIMATION
 
-// Back to top button
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 300) {
-    topBtn.style.display = "block";
-  } else {
-    topBtn.style.display = "none";
-  }
-});
+const typing = document.getElementById("typing");
 
-topBtn.addEventListener("click", () => {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
-});
-
-// Simple typing animation
 const words = [
-  "AI & ML Engineer",
-  "Technology Enthusiast",
-  "Future Innovator",
-  "Creative Learner"
+    "AI & ML Engineer",
+    "Technology Enthusiast",
+    "Future Innovator",
+    "Problem Solver"
 ];
 
 let wordIndex = 0;
 let charIndex = 0;
 let deleting = false;
 
-const typing = document.getElementById("typing");
-
 function typeEffect() {
-  const currentWord = words[wordIndex];
 
-  if (!deleting) {
-    typing.textContent =
-      currentWord.substring(0, charIndex + 1);
-    charIndex++;
+    const currentWord = words[wordIndex];
 
-    if (charIndex === currentWord.length) {
-      deleting = true;
-      setTimeout(typeEffect, 1200);
-      return;
+    if (deleting) {
+        charIndex--;
+    } else {
+        charIndex++;
     }
-  } else {
-    typing.textContent =
-      currentWord.substring(0, charIndex - 1);
-    charIndex--;
 
-    if (charIndex === 0) {
-      deleting = false;
-      wordIndex = (wordIndex + 1) % words.length;
+    typing.textContent = currentWord.substring(0, charIndex);
+
+    let speed = deleting ? 55 : 100;
+
+    if (!deleting && charIndex === currentWord.length) {
+
+        deleting = true;
+        speed = 1300;
+
+    } else if (deleting && charIndex === 0) {
+
+        deleting = false;
+        wordIndex = (wordIndex + 1) % words.length;
+        speed = 400;
+
     }
-  }
 
-  setTimeout(typeEffect, deleting ? 50 : 100);
+    setTimeout(typeEffect, speed);
 }
 
 typeEffect();
+
+// AUTOMATIC COPYRIGHT YEAR
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+// BACK TO TOP BUTTON
+
+const topBtn = document.getElementById("topBtn");
+
+window.addEventListener("scroll", function() {
+
+    topBtn.style.display =
+        window.scrollY > 300 ? "block" : "none";
+
+});
+
+topBtn.addEventListener("click", function() {
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+});
