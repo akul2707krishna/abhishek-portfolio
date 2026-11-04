@@ -1,155 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Abhishek's personal AI and ML portfolio">
-  <title>Abhishek | AI & ML Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Abhishek Khajuri - AI and ML Engineering Student Portfolio">
+
+    <title>Abhishek Khajuri | AI & ML Portfolio</title>
+
+    <link rel="stylesheet" href="./style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
 <header>
-  <nav class="navbar">
-    <a href="#home" class="logo">ABHISHEK<span>.</span></a>
-    <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation">☰</button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+    <nav class="navbar">
+        <a href="#home" class="logo">ABHISHEK<span>.</span></a>
+
+        <button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false">
+            ☰
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 </header>
 
 <main>
-<section class="hero" id="home">
-  <div class="hero-content">
-    <p class="welcome">WELCOME TO MY PORTFOLIO</p>
-    <h1>Hi, I'm <span>Abhishek</span></h1>
-    <h2>Future <span id="typing">AI & ML Engineer</span></h2>
-    <p class="hero-description">
-      Exploring Artificial Intelligence, Machine Learning and
-      technology to build a smarter future.
-    </p>
-    <div class="hero-buttons">
-      <a href="#projects" class="btn primary">Explore My Work</a>
-      <a href="#contact" class="btn secondary">Contact Me</a>
-    </div>
-  </div>
 
-  <div class="hero-image">
-    <div class="image-frame">
-      <img src="abhishek.jpg" alt="Abhishek profile photo">
-    </div>
-  </div>
-</section>
+    <!-- HOME SECTION -->
+    <section class="hero" id="home">
 
-<section class="section" id="about">
-  <p class="section-tag">GET TO KNOW ME</p>
-  <h2 class="section-title">About <span>Me</span></h2>
-  <div class="about-card">
-    <p>
-      Hello! I'm Abhishek, an enthusiastic first-semester B.Tech
-      student specializing in Artificial Intelligence and Machine
-      Learning.
-    </p>
-    <p>
-      I'm passionate about technology, programming, innovation
-      and discovering how AI can solve real-world problems.
-      My journey is just beginning, and I'm excited to learn,
-      experiment and grow.
-    </p>
-  </div>
-</section>
+        <div class="hero-content">
+            <p class="welcome">WELCOME TO MY PORTFOLIO</p>
 
-<section class="section" id="education">
-  <p class="section-tag">MY ACADEMIC JOURNEY</p>
-  <h2 class="section-title">My <span>Education</span></h2>
-  <div class="education-card">
-    <div class="edu-icon">🎓</div>
-    <div>
-      <h3>Bachelor of Technology (B.Tech)</h3>
-      <h4>Artificial Intelligence & Machine Learning</h4>
-      <p>BGS College of Engineering and Technology</p>
-      <p>Bengaluru, Karnataka</p>
-      <span class="status">Currently in 1st Semester</span>
-    </div>
-  </div>
-</section>
+            <h1>Hi, I'm <span>Abhishek</span></h1>
 
-<section class="section" id="skills">
-  <p class="section-tag">WHAT I'M LEARNING</p>
-  <h2 class="section-title">My <span>Skills</span></h2>
+            <h2>Future <span id="typing">AI & ML Engineer</span></h2>
 
-  <div class="skills-grid">
-    <div class="skill-card">💻 Programming</div>
-    <div class="skill-card">🐍 Python</div>
-    <div class="skill-card">🌐 HTML & CSS</div>
-    <div class="skill-card">⚡ JavaScript</div>
-    <div class="skill-card">🤖 Artificial Intelligence</div>
-    <div class="skill-card">🧠 Machine Learning</div>
-    <div class="skill-card">🔍 Problem Solving</div>
-    <div class="skill-card">📚 Continuous Learning</div>
-  </div>
-  <p class="note">These are my learning areas and developing skills.</p>
-</section>
+            <p class="hero-description">
+                I'm a first-year AI & ML engineering student
+                passionate about coding, innovation and technology.
+                Exploring Artificial Intelligence to build a smarter future.
+            </p>
 
-<section class="section" id="projects">
-  <p class="section-tag">MY CREATIVE JOURNEY</p>
-  <h2 class="section-title">My <span>Projects</span></h2>
-  <div class="projects-grid">
-    <div class="project-card">
-      <div class="project-icon">🌐</div>
-      <h3>Personal Portfolio</h3>
-      <p>A responsive website showcasing my profile, education and skills.</p>
-      <span>HTML • CSS • JavaScript</span>
-    </div>
-    <div class="project-card">
-      <div class="project-icon">🤖</div>
-      <h3>Future AI Projects</h3>
-      <p>Exploring ideas and developing my first AI and ML projects.</p>
-      <span>Learning • Experimenting</span>
-    </div>
-  </div>
-</section>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn primary">Explore My Work</a>
+                <a href="#contact" class="btn secondary">Contact Me</a>
+            </div>
+        </div>
 
-<section class="section goals">
-  <p class="section-tag">MY VISION</p>
-  <h2 class="section-title">Future <span>Goals</span></h2>
-  <div class="about-card">
-    <p>✦ Become a skilled AI and ML engineer.</p>
-    <p>✦ Build innovative real-world projects.</p>
-    <p>✦ Master programming and problem solving.</p>
-    <p>✦ Contribute to meaningful technology solutions.</p>
-  </div>
-</section>
+        <div class="hero-image">
+            <div class="image-frame">
+                <img
+                    src="./abhishek.jpg"
+                    alt="Abhishek Khajuri profile photo"
+                    class="profile-photo"
+                >
+            </div>
+        </div>
 
-<section class="section" id="contact">
-  <p class="section-tag">LET'S CONNECT</p>
-  <h2 class="section-title">Contact <span>Me</span></h2>
-  <div class="contact-card">
-    <p>Interested in technology, collaboration or connecting?</p>
-    <p>I'd love to hear from you!</p>
-    <a href="mailto:your-email@example.com" class="btn primary">
-      Send Me an Email
-    </a>
-    <p class="social-text">Let's learn, build and grow together.</p>
-  </div>
-</section>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section" id="about">
+
+        <p class="section-tag">GET TO KNOW ME</p>
+
+        <h2 class="section-title">About <span>Me</span></h2>
+
+        <div class="about-card">
+            <p>
+                Hello! I'm Abhishek Khajuri, a first-year
+                B.Tech student specializing in Artificial
+                Intelligence and Machine Learning at
+                BGS College of Engineering and Technology.
+            </p>
+
+            <p>
+                I'm interested in programming, artificial
+                intelligence, machine learning and technology.
+                I enjoy learning new things and improving
+                my technical skills.
+            </p>
+
+            <p>
+                Apart from technology, I enjoy playing cricket
+                and exploring new ideas.
+            </p>
+        </div>
+
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section class="section" id="education">
+
+        <p class="section-tag">MY ACADEMIC JOURNEY</p>
+
+        <h2 class="section-title">My <span>Education</span></h2>
+
+        <div class="education-card">
+
+            <div class="edu-icon">🎓</div>
+
+            <div>
+                <h3>Bachelor of Technology (B.Tech)</h3>
+
+                <h4>Artificial Intelligence & Machine Learning</h4>
+
+                <p>BGS College of Engineering and Technology</p>
+
+                <p>Bengaluru, Karnataka</p>
+
+                <span class="status">Currently in 1st Year</span>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section class="section" id="skills">
+
+        <p class="section-tag">WHAT I'M LEARNING</p>
+
+        <h2 class="section-title">My <span>Skills</span></h2>
+
+        <div class="skills-grid">
+            <div class="skill-card">💻 Programming</div>
+            <div class="skill-card">🐍 Python</div>
+            <div class="skill-card">🌐 HTML & CSS</div>
+            <div class="skill-card">⚡ JavaScript</div>
+            <div class="skill-card">🤖 Artificial Intelligence</div>
+            <div class="skill-card">🧠 Machine Learning</div>
+            <div class="skill-card">🔍 Problem Solving</div>
+            <div class="skill-card">📚 Continuous Learning</div>
+        </div>
+
+        <p class="note">
+            These are my learning areas and developing skills.
+        </p>
+
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section class="section" id="projects">
+
+        <p class="section-tag">MY CREATIVE JOURNEY</p>
+
+        <h2 class="section-title">My <span>Projects</span></h2>
+
+        <div class="projects-grid">
+
+            <div class="project-card">
+                <div class="project-icon">🌐</div>
+
+                <h3>Personal Portfolio Website</h3>
+
+                <p>
+                    A responsive website showcasing my profile,
+                    education and technical interests.
+                </p>
+
+                <span>HTML • CSS • JavaScript</span>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon">🤖</div>
+
+                <h3>Upcoming AI Projects</h3>
+
+                <p>
+                    Exploring ideas and preparing to build
+                    my first Artificial Intelligence projects.
+                </p>
+
+                <span>Learning • Experimenting</span>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FUTURE GOALS -->
+    <section class="section goals">
+
+        <p class="section-tag">MY VISION</p>
+
+        <h2 class="section-title">Future <span>Goals</span></h2>
+
+        <div class="about-card">
+            <p>✦ Become a skilled AI and ML Engineer.</p>
+            <p>✦ Build innovative real-world projects.</p>
+            <p>✦ Master programming and problem solving.</p>
+            <p>✦ Contribute to meaningful technology solutions.</p>
+        </div>
+
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section" id="contact">
+
+        <p class="section-tag">LET'S CONNECT</p>
+
+        <h2 class="section-title">Contact <span>Me</span></h2>
+
+        <div class="contact-card">
+
+            <p>Interested in technology or collaboration?</p>
+
+            <p>I'd love to hear from you!</p>
+
+            <a href="mailto:YOUR_EMAIL@gmail.com" class="btn primary">
+                Send Me an Email
+            </a>
+
+            <p>
+                <a
+                    href="https://github.com/akul2707krishna"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Visit My GitHub
+                </a>
+            </p>
+
+            <p class="social-text">
+                Let's learn, build and grow together.
+            </p>
+
+        </div>
+
+    </section>
+
 </main>
 
 <footer>
-  <p>© <span id="year"></span> Abhishek. All Rights Reserved.</p>
-  <p>Designed with ❤️ and passion for technology.</p>
+    <p>© <span id="year"></span> Abhishek Khajuri. All Rights Reserved.</p>
+    <p>Designed with ❤️ and passion for technology.</p>
 </footer>
 
 <button id="topBtn" aria-label="Back to top">↑</button>
 
-<script src="script.js"></script>
+<script src="./script.js"></script>
+
 </body>
 </html>
